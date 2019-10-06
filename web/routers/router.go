@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"dogego-mvc/web/controllers"
+	"{{cookiecutter.app_name}}/web/controllers"
 	"github.com/gin-gonic/gin"
 	"gitlab.com/go-box/pongo2gin"
 	"os"

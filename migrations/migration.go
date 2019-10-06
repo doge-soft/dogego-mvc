@@ -1,7 +1,7 @@
 package migrations
 
 import (
-	"dogego-mvc/models"
+	"{{cookiecutter.app_name}}/models"
 	"github.com/jinzhu/gorm"
 )
 

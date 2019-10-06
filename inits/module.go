@@ -1,6 +1,6 @@
 package inits
 
-import "dogego-mvc/modules"
+import "{{cookiecutter.app_name}}/modules"
 
 // 初始化'模块'
 func InitModule() {

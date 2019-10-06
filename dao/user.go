@@ -1,8 +1,8 @@
 package dao
 
 import (
-	"dogego-mvc/datasource"
-	"dogego-mvc/models"
+	"{{cookiecutter.app_name}}/datasource"
+	"{{cookiecutter.app_name}}/models"
 	"errors"
 )
 

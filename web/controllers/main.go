@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"dogego-mvc/web/serializer"
-	"dogego-mvc/web/services"
+	"{{cookiecutter.app_name}}/web/serializer"
+	"{{cookiecutter.app_name}}/web/services"
 	"github.com/gin-gonic/gin"
 )
 
