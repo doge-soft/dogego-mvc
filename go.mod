@@ -10,4 +10,5 @@ require (
 	github.com/jinzhu/gorm v1.9.11
 	github.com/joho/godotenv v1.3.0
 	gitlab.com/go-box/pongo2gin v0.0.0-20180611101114-fb2c4f0fe00f
+	golang.org/x/crypto v0.0.0-20190325154230-a5d413f7728c
 )
