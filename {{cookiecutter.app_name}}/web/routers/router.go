@@ -5,6 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"gitlab.com/go-box/pongo2gin"
 	"os"
+	"{{cookiecutter.app_name}}/web/urls"
 )
 
 func NewRouter() *gin.Engine {
@@ -13,15 +14,14 @@ func NewRouter() *gin.Engine {
 	// 设置HTML渲染器
 	router.HTMLRender = pongo2gin.New(pongo2gin.RenderOptions{
 		TemplateDir: os.Getenv("TEMPLATE_DIR"),
-		ContentType: "text/html",
+		ContentType: "text/html; charset=utf-8",
 	})
-
-	// 中间件, 顺序不能乱
 
 	web := router.Group("/")
 	{
-		// 主页
-		web.GET("/", controllers.Index)
+		for _, url := range urls.Urls {
+			web.Handle(url.Method, url.Path, url.Handler)
+		}
 	}
 
 	api := router.Group("/api/v1")
