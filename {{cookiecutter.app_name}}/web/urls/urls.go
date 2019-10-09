@@ -1,6 +1,9 @@
 package urls
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"{{cookiecutter.app_name}}/web/controllers"
+)
 
 type URL struct {
 	Path    string
@@ -8,4 +11,6 @@ type URL struct {
 	Handler gin.HandlerFunc
 }
 
-var Urls = []URL{}
+var Urls = []URL{
+	URL{"/", "GET", controllers.Index},
+}
