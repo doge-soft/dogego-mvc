@@ -17,6 +17,9 @@ func NewRouter() *gin.Engine {
 		ContentType: "text/html; charset=utf-8",
 	})
 
+	// 静态文件服务
+	router.Static("/wwwroot", os.Getenv("WWWROOT_DIR"))
+
 	web := router.Group("/")
 	{
 		for _, url := range urls.Urls {
